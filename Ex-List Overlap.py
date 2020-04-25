@@ -44,9 +44,10 @@ for i in lst1:
 	for j in lst2:
 		if i == j:
 			lst3.append(i)
-			print(lst3)
+			
 
 if len(lst3) == 0:
 	print("Sorry no matches. Try again.")
 
 lst3 = list(dict.fromkeys(lst3))
+print(lst3)
