@@ -24,7 +24,6 @@ def cow_bull():
     cow = 0
     bull = 0
     n1 = random.randint(1000,9999)
-    print(n1)
     n1_lst = [int(i) for i in str(n1)]
     #print(n1_lst)
     n2 = input("Enter 4 digit number and we will tell you the result:\n")
