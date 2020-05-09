@@ -8,38 +8,38 @@ Rock beats scissors
 Scissors beats paper
 Paper beats rock
 """
-import sys
 
-def compare():
-    user1 = input("Enter your name. Player 1: \n")
-    user2 = input("Enter your name. Player 2: \n")
-
-    a = input("{0} Choose any 1 from Rock, Paper and Scissor: \n".format(user1))
-    b = input("{0} Choose any 1 from Rock, Paper and Scissor: \n".format(user2))
-
-    if a == b:
-        print("It's a tie!")
-    elif a == 'rock':
-        if b == 'scissors':
-            print("Rock wins!")
+def rps():
+    usr1 = input("Enter your name user 1: \n")
+    usr2 = input("Enter your name user 1: \n")
+    ans1 = input("{0} What do you want to pick rock, paper or scissor: \n".format(usr1))
+    ans2 = input("{0} What do you want to pick rock, paper or scissor: \n".format(usr2))
+    
+    
+    if ans1 == ans2:
+        print("Match Draw.")
+    
+    elif ans1 == 'rock':
+        if ans2 == 'scissor':
+            print("{0} Won.".format(usr1))
         else:
-            print("Paper wins!")
-    elif a == 'scissors':
-        if b == 'paper':
-            print("Scissors win!")
-        else:
-            print("Rock wins!")
-    elif a == 'paper':
-        if b == 'rock':
-            print("Paper wins!")
-        else:
-            print("Scissors win!")
+            print("{0} Won.".format(usr2))
 
-compare()
+    elif ans1 == 'scissor':
+        if ans2 == 'paper':
+            print("{0} Won.".format(usr1))
+        else:
+            print("{0} Won.".format(usr2))
+    elif ans1 == 'paper':
+        if ans2 == 'rock':
+            print("{0} Won.".format(usr1))
+        else:
+            print("{0} Won.".format(usr2))
 
-while input("Do you want to play again: y/n \n") == 'y':
-    compare()
+rps()
+
+while input("Do you want to play again: 'y/n' \n") == "y":
+    rps()
 else:
-    print("Bbye")
-    exit(0)
+    print("Bbye. Game Over. \n")
  
